@@ -14,12 +14,12 @@ function App() {
   };
 
   const infos = Info.map((e, index) => (
-    <div key={index} className={`bg-neutral-300 p-3 flex justify-center item-center w-full ${activatedStates[index] ? 'activated' : ''}`}>
+    <div key={index} className={`bg-neutral-300 p-3 flex justify-center items-center w-full ${activatedStates[index] ? 'activated' : ''}`}>
       <div className='w-8/12 bg-white h-24 rounded-xl  flex justify-around items-center'>
         <p className='text-black w-6/12 text-3xl'>{e.name}</p>
         <div className=''>
-          <LiaToggleOnSolid className={`text-7xl transition text-green-500 ${activatedStates[index] ? 'hidden duration-300' : 'duration-300'}`} onClick={() => toggleActivation(index)} />
-          <LiaToggleOffSolid className={`text-7xl text-neutral-400 ${activatedStates[index] ? 'duration-300' : 'hidden duration-300'}`} onClick={() => toggleActivation(index)} />
+          <LiaToggleOnSolid className={`text-7xl transition text-green-500 cursor-pointer ${activatedStates[index] ? 'hidden duration-300' : 'duration-300'}`} onClick={() => toggleActivation(index)} />
+          <LiaToggleOffSolid className={`text-7xl text-neutral-400 cursor-pointer ${activatedStates[index] ? 'duration-300' : 'hidden duration-300'}`} onClick={() => toggleActivation(index)} />
         </div>
       </div>
     </div>
